@@ -1,15 +1,12 @@
 import { useState } from 'react'
 
 import './App.css'
-import { drawMap } from './utils/map'
+import { Map } from './components/Map/map'
 
 function App() {
   const [count, setCount] = useState(0)
-  const map = drawMap()
   return (
-    <div>
-      {map}
-    </div>
+    <Map></Map>
   )
 }
 

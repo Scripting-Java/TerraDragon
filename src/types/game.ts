@@ -1,4 +1,6 @@
-export type tileType = "plains"|"forest"|"mountain"|"lake"|"resource"
+export type tileType = "plains"|"resource"|"boost"
+export type boostType = "statue"|"relic"
+export type resourceType = "forest"|"mountain"|"lake"
 export type buildingType = "townHall"|"house"|"barracks"|"office"
 export interface Tile{
     id:number,
@@ -7,7 +9,9 @@ export interface Tile{
     unlocked:boolean,
     type:tileType,
     building: buildingType|null,
-    buildingLevel:number
+    resource?: resourceType
+    boost?:boostType
+    buildingLevel:number|null
 }
 export interface Resources{
     wood:number,

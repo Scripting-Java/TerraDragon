@@ -13,15 +13,16 @@ export interface Tile{
     boost?:boostType
     buildingLevel:number|null
 }
-export interface Resources{
+export interface resourceCarrier{
     wood:number,
     stone:number,
     fish:number
 }
+
 export interface game{
     tiles:Tile[],
     money:number,
     people:number,
     guards:number,
-    resources:Resources
+    resources:resourceCarrier
 }

@@ -1,16 +1,26 @@
-import type { game } from "../../types/game";
-import { tiles } from "../../utils/world";
+import type { Tile } from "../../types/game";
+
 import "./map.css"
 
-export function Map(){
-    return(
+interface map {
+    tiles: Tile[],
+    tier:number
+}
+
+export function Map({ tiles, tier }: map) {
+    return (
         <div className="map">
-            {tiles.map(tile=>(
-                <div key={tile.id} className="tile" style={{gridColumn: tile.x+2, gridRow: 2 -tile.y}}>
-                    <p>{tile.building}</p>
-                    <p>{tile.id}</p>
+            {tiles.map(tile => (
+                <div key={tile.id} className="tile" style={{ gridColumn: tile.x + tier+1, gridRow: tier - tile.y+ 1 }}>
+                        <div className="displayInfo">
+                        <p>{tile.building}</p>
+                        <p>Id: {tile.id}</p>
+                        <p>Position: ({tile.x},{tile.y})</p>
+                        <p>Type: {tile.type}</p>
+                    </div>
                 </div>
             ))}
         </div>
     )
 }
+

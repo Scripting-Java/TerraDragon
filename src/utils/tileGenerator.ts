@@ -5,8 +5,8 @@ import type { boostType, resourceType } from "../types/game";
 export function generateTiles(tier:number){
     const tiles: Tile[] = [...start]
     let id  =9
-    for(let x = -tier; x<=tier; x++){
-        for(let y = -tier; y<=tier; y++){
+    for(let y = tier; y>=-tier; y--){
+        for(let x = -tier; x<=tier; x++){
             //this to preserve the starting tiles
             if(Math.abs(x)<=1&&Math.abs(y)<=1){
                 continue;

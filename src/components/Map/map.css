@@ -8,7 +8,6 @@
 
 .tile{
     border: 4px solid rgb(255, 103, 103);
-    background-color: rgb(255, 184, 184);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -19,4 +18,20 @@
     display: flex;
     flex-direction: column;
     padding: 15px;
+}
+
+.plains{
+    background-color: rgb(161, 214, 161);
+}
+
+.resource{
+    background-color: rgb(200, 239, 252);
+}
+
+.boost{
+    background-color: gold;
+}
+
+.true{
+    background-color: rgb(228, 148, 148);
 }

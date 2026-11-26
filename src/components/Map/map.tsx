@@ -8,11 +8,7 @@ interface map {
 }
 
 export function Map({ tiles, tier }: map) {
-        console.log(tiles.map(tile => ({
-        id: tile.id,
-        column: tile.x + tier + 1,
-        row: tier - tile.y + 1
-    })));
+
     return (
         <div className="map">
             {tiles.map(tile => (

@@ -1,6 +1,8 @@
 export type tileType = "plains"|"resource"|"boost"
 export type boostType = "statue"|"relic"
+export  const boostTypeArray: boostType[] = ["statue","relic"]
 export type resourceType = "forest"|"mountain"|"lake"
+export const resourceTypeArray:resourceType[] = ["forest","mountain","lake"] 
 export type buildingType = "townHall"|"house"|"barracks"|"office"
 export interface Tile{
     id:number,

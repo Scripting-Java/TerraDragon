@@ -7,7 +7,7 @@ import { generateTiles } from './utils/tileGenerator'
 
 function App() {
   const [count, setCount] = useState(0)
-  const tier = 2
+  const tier = 3
   const tiles = generateTiles(tier)
   return (
     <Map tiles={tiles} tier={2}></Map>

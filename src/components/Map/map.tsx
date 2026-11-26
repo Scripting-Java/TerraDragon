@@ -12,7 +12,7 @@ export function Map({ tiles, tier }: map) {
     return (
         <div className="map">
             {tiles.map(tile => (
-                <div key={tile.id} className={`tile ${tile.type} ${tile.building!=null}`} style={{ gridColumn: tile.x + tier+2, gridRow: tier - tile.y+ 2 }}>
+                <div key={tile.id} className={`tile ${tile.type} ${tile.building ? "building":""}`} style={{ gridColumn: tile.x + tier+2, gridRow: tier - tile.y+ 2 }}>
                         
                         <div className="displayInfo">
                         <p>{tile.building}</p>

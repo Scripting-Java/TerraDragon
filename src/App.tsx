@@ -27,7 +27,7 @@ function App() {
             <p>ID: {selected.id}</p>
             <p>Position:({selected.x},{selected.y})</p>
             <p>Type: {selected.type}</p>
-            <p>Building: {selected.building}</p>
+            <p>Building: {selected.building ?? "None"}</p>
           </div>
         </div>
       )}

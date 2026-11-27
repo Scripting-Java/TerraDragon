@@ -32,15 +32,16 @@ export function unlockTile(tile: Tile, game: game) {
     }
     if (afford && adjacent && !tile.unlocked) {
         const newTiles = game.tiles.map(prev => prev.id === tile.id ? { ...prev, unlocked: true } : prev)
-        return newTiles
+        return {...game, money:game.money-cost.money, people:game.people-cost.people, guards:game.guards-cost.guards,tiles:newTiles}
     }
+    return null
 }
 
 export function checkAdjacency(tile:Tile,tiles:Tile[]){
     let adjacent=false
     for (const tempTile of tiles) {
         if(!tempTile.unlocked) continue
-        
+
         if (tile.x + 1 === tempTile.x && tile.y === tempTile.y)
             adjacent = true
         if (tile.x - 1 === tempTile.x && tile.y === tempTile.y)

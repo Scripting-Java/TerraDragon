@@ -1,0 +1,26 @@
+.sidebar {
+    position: fixed;
+    left: 0px;
+    border-radius: 14px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    background-color: #c49b9b;
+    border: 5px solid rgb(133, 133, 133);
+    z-index: 100;
+}
+
+.sidebar button {
+    width: 100px;
+    padding: 10px;
+    background: #bbffd7;
+    color: black;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}

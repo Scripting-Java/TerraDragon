@@ -6,11 +6,12 @@ import { starting } from './utils/init'
 import { getVisibleTiles } from './utils/getVisibleTiles'
 import { getTileCost, unlockTile } from './utils/unlockTile'
 import { getTiles } from './utils/tileGenerator'
+import { Sidebar } from './components/Sidebar/Sidebar/sidebar'
 
 function App() {
   const [tier, setTier] = useState(2)
   const [selected, setSelected] = useState<Tile | null>(null)
-  const [game, setGame] = useState<game>({ ...starting, tiles:getTiles(2,1,starting.tiles)})
+  const [game, setGame] = useState<game>({ ...starting, tiles: getTiles(2, 1, starting.tiles) })
 
 
   function handleUnlock() {
@@ -26,8 +27,9 @@ function App() {
   return (
     <div>
       <p>Tier:{tier}</p>
+      <Sidebar game={game}></Sidebar>
       <Map tiles={getVisibleTiles(game.tiles)} tier={tier} onSelect={setSelected} selected={selected}></Map>
-      
+
       {selected && !selected.unlocked && (
         <div>
           <p>Cost:</p>

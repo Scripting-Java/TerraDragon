@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+
+.resources {
+    font-family: 'Beau Rivage';
+    position: fixed;
+    left: 155px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px;
+    width: 180px;
+    background-color: #e8d5ae;
+    border: 5px solid #493326;
+    border-radius: 14px;
+    color: black;
+    z-index: 99;
+}
+
+.resources h2 {
+    margin: 0 0 12px;
+    font-family: 'Charm';
+    text-align: center;
+    font-size: 45px;
+    color: black;
+}
+
+.resources p {
+    font-size: 30px;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 8px;
+    background-color: #c49a4a;
+    border-radius: 9px;
+}

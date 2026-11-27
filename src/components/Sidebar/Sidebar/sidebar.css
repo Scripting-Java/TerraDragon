@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+
 .sidebar {
     position: fixed;
     left: 0px;
@@ -10,17 +12,20 @@
     flex-direction: column;
     gap: 15px;
     padding: 10px;
-    background-color: #c49b9b;
-    border: 5px solid rgb(133, 133, 133);
+    background-color: #713d3d;
+    border: 5px solid #c49a4a;
     z-index: 100;
+    font-family: 'Beau Rivage';
 }
 
 .sidebar button {
-    width: 100px;
+    width: 120px;
     padding: 10px;
     background: #bbffd7;
     color: black;
     border: none;
     border-radius: 9px;
     cursor: pointer;
+    font-family: 'Charm';
+    font-size: 24px;
 }

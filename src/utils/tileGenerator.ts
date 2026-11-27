@@ -3,7 +3,7 @@ import { tiles as start} from "./world";
 import type { boostType, resourceType } from "../types/game";
 
 export function getTiles(tier:number, lastTier:number,tiles:Tile[]){
-    const newTiles = tiles
+    const newTiles = [...tiles]
     if(newTiles.length===0){
         newTiles.push(...start)
         lastTier=1

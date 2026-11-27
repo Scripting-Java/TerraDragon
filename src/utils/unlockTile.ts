@@ -35,3 +35,20 @@ export function unlockTile(tile: Tile, game: game) {
         return newTiles
     }
 }
+
+export function checkAdjacency(tile:Tile,tiles:Tile[]){
+    let adjacent=false
+    for (const tempTile of tiles) {
+        if(!tempTile.unlocked) continue
+        
+        if (tile.x + 1 === tempTile.x && tile.y === tempTile.y)
+            adjacent = true
+        if (tile.x - 1 === tempTile.x && tile.y === tempTile.y)
+            adjacent = true
+        if (tile.y + 1 === tempTile.y && tile.x === tempTile.x)
+            adjacent = true
+        if (tile.y - 1 === tempTile.y && tile.x === tempTile.x)
+            adjacent = true
+    }
+    return adjacent
+}

@@ -2,16 +2,17 @@ import { useState } from 'react'
 import './App.css'
 import { Map } from './components/Map/map'
 import { getTiles } from './utils/tileGenerator'
-import type { Tile } from './types/game'
+import type { Tile, game } from './types/game'
+import { starting } from './utils/init'
+import { getVisibleTiles } from './utils/getVisibleTiles'
 
 function App() {
   const [tier, setTier] = useState(2)
-  const [tiles, setTiles] = useState<Tile[]>(() => getTiles(tier, 0, []))
   const [selected, setSelected] = useState<Tile | null>(null)
-
+  const[game,setGame] = useState<game>({...starting})
   function expandMap() {
     const next = tier + 1
-    setTiles(getTiles(next, tier, tiles))
+    setGame(prev=>({...prev,tiles:getTiles(next,tier,prev.tiles)}))
     setTier(next)
   }
 
@@ -19,7 +20,7 @@ function App() {
     <div>
       <p>Tier:{tier}</p>
       <button onClick={expandMap}>Expand Map</button>
-      <Map tiles={tiles} tier={tier} onSelect={setSelected} selected={selected}></Map>
+      <Map tiles={getVisibleTiles(game.tiles)} tier={tier} onSelect={setSelected} selected={selected}></Map>
       {selected && (
         <div className='tile'>
           <div className='displayInfo'>

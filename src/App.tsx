@@ -13,7 +13,7 @@ function App() {
   const [tier, setTier] = useState(2)
   const [selected, setSelected] = useState<Tile | null>(null)
   const [game, setGame] = useState<game>({ ...starting, tiles: getTiles(2, 1, starting.tiles) })
-
+  const[tilePos, setTilePos] = useState({x:0,y:0})
 
   function handleUnlock() {
     if (!selected)
@@ -29,10 +29,10 @@ function App() {
     <div>
       <p>Tier:{tier}</p>
       <Sidebar game={game}></Sidebar>
-      <Map tiles={getVisibleTiles(game.tiles)} tier={tier} onSelect={setSelected} selected={selected}></Map>
+      <Map tiles={getVisibleTiles(game.tiles)} tier={tier} onSelect={setSelected} selected={selected} tilePos={setTilePos}></Map>
 
-      {selected && !selected.unlocked && (
-        <TileInfo tile={selected} game={game} onUnlock={handleUnlock}></TileInfo>
+      {selected && (
+        <TileInfo tile={selected} game={game} onUnlock={handleUnlock} pos={tilePos}></TileInfo>
       )}
     </div>
   )

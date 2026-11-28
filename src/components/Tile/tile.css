@@ -4,9 +4,6 @@
 .tileInfo {
     font-family: 'Beau Rivage';
     position: fixed;
-    top: 50%;
-    right: 30px;
-    transform: translateY(-50%);
     padding: 15px;
     width: 220px;
     background-color: #e8d5ae;
@@ -20,7 +17,7 @@
     font-family: 'Charm';
     text-align: center;
     font-size: 40px;
-    color:black
+    color: black
 }
 
 .tileInfo h3 {
@@ -30,7 +27,7 @@
     margin: 10px;
 }
 
-.tileInfo p{
+.tileInfo p {
     font-size: 25px;
     text-align: center;
     padding: 10px;
@@ -39,23 +36,31 @@
     border-radius: 10px;
 }
 
-.tileInfo button{
+.tileInfo button {
     padding: 10px;
     border: 3px solid #493326;
-    color:white;
+    color: white;
     border-radius: 12px;
     font-family: 'Charm';
     font-size: 22px;
     cursor: pointer;
 }
 
-.tileInfo p span{
+.tileInfo p span {
     font-family: 'Charm';
 }
 
-.tileInfo summary{
+.tileInfo summary {
     display: flex;
     cursor: Pointer;
     text-align: center;
     justify-content: center;
+}
+
+.bg {
+    margin-bottom: 8px;
+    background-color: #713d3d;
+    padding: 10px;
+    border-radius: 20px;
+    color:white;
 }

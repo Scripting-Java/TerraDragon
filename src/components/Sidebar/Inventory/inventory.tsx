@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import type { game } from "../../../types/game";
 import "./inventory.css"
+import { formatMoney, formatNumber } from "../../../utils/formatter";
 interface inventory{
     game:game
 }
@@ -32,10 +33,9 @@ export function Inventory({game}:inventory){
     return(
         <div className="inventory" style={{left:position.x, top:position.y}} onPointerDown={handleClickToDrag} onPointerUp={handleClickOff} onPointerMove={handleDrag}>
             <h2>Inventory</h2>
-            <p>Money:<span>{game.money}</span></p>
-            <p>People:<span>{game.people}</span></p>
-            <p>Guards: <span>{game.guards}</span></p>
-        
+            <p>Money:$<span>{formatMoney(game.money)}</span></p>
+            <p>People:<span>{formatNumber(game.people)}</span></p>
+            <p>Guards: <span>{formatNumber(game.guards)}</span></p>
         </div>  
     )
 }

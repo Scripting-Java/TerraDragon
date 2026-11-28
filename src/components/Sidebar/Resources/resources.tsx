@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import type { game } from "../../../types/game";
 import "./resources.css"
+import { formatMoney, formatNumber } from "../../../utils/formatter";
 interface Resources{
     game:game
 }
@@ -31,9 +32,9 @@ export function Resources({game}: Resources){
     return(
         <div className="resources" style={{left:position.x, top:position.y}} onPointerDown={handleClickToDrag} onPointerUp={handleClickOff} onPointerMove={handleDrag}>
             <h2>Resources</h2>
-            <p>Wood:<span>{game.resources.wood}</span></p>
-            <p>Stone:<span>{game.resources.stone}</span></p>
-            <p>Fish:<span>{game.resources.fish}</span></p>
+            <p>Wood:<span>{formatMoney(game.resources.wood)}</span></p>
+            <p>Stone:<span>{formatMoney(game.resources.stone)}</span></p>
+            <p>Fish:<span>{formatNumber(game.resources.fish)}</span></p>
         </div>
     )
 }

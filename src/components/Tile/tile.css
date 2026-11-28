@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+
+.tileInfo {
+    font-family: 'Beau Rivage';
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    padding: 15px;
+    width: 220px;
+    background-color: #e8d5ae;
+    border: 5px solid #493326;
+    border-radius: 14px;
+    color: black;
+    z-index: 100;
+}
+
+.tileInfo h2 {
+    font-family: 'Charm';
+    text-align: center;
+    font-size: 40px;
+    color:black
+}
+
+.tileInfo h3 {
+    font-family: 'Charm';
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+}
+
+.tileInfo p{
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #c49a4a;
+    border-radius: 10px;
+}
+
+.tileInfo button{
+    padding: 10px;
+    border: 3px solid #493326;
+    color:white;
+    border-radius: 12px;
+    font-family: 'Charm';
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.tileInfo p span{
+    font-family: 'Charm';
+}
+
+.tileInfo summary{
+    display: flex;
+    cursor: Pointer;
+    text-align: center;
+    justify-content: center;
+}

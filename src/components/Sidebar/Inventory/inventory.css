@@ -1,0 +1,36 @@
+.inventory{
+    font-family: 'Beau Rivage';
+    position: fixed;
+    left:155px;
+    top:50%;
+    transform: translateY(-50%);
+    padding: 15px;
+    width:180px;
+    background-color: #e8d5ae;
+    border: 5px solid #493326;
+    border-radius: 14px;
+    color:black;
+    z-index: 99;
+}
+
+.inventory h2{
+    font-family: 'Charm';
+    text-align: center;
+    font-size: 45px;
+    color:black;
+}
+
+.inventory p{
+    font-size: 30px;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 8px;
+    background-color: #c49a4a;
+    border-radius: 9px;
+}
+
+.inventory p span{
+    font-family: 'Charm';
+    font-size: 25px;
+}

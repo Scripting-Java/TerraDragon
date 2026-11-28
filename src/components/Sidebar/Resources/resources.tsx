@@ -7,9 +7,9 @@ export function Resources({game}: Resources){
     return(
         <div className="resources">
             <h2>Resources</h2>
-            <p>Wood:{game.resources.wood}</p>
-            <p>Stone:{game.resources.stone}</p>
-            <p>Fish:{game.resources.fish}</p>
+            <p>Wood:<span>{game.resources.wood}</span></p>
+            <p>Stone:<span>{game.resources.stone}</span></p>
+            <p>Fish:<span>{game.resources.fish}</span></p>
         </div>
     )
 }

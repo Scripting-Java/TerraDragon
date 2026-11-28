@@ -33,3 +33,8 @@
     background-color: #c49a4a;
     border-radius: 9px;
 }
+
+.resources p span{
+    font-size: 25px;
+    font-family: 'Charm';
+}

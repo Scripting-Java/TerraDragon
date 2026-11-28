@@ -1,8 +1,7 @@
 .inventory{
     font-family: 'Beau Rivage';
     position: fixed;
-    left:155px;
-    top:50%;
+    cursor:pointer;
     transform: translateY(-50%);
     padding: 15px;
     width:180px;
